@@ -1,0 +1,68 @@
+<div class="border f-16 padding-20 bg-red">
+  <p class="color-6 f-20 fw margin-bottom-20">模版</p>
+  <div class="bg-f margin-bottom-20 padding-10">
+    <div class="f-14 color-theme fw">1. 管道(pipe)</div>
+    <div>
+      <span class="margin-right-40">birthday | date : </span>
+      <span class="color-red">{{birthday | date }}</span>
+    </div>
+    <div>
+      <span class="margin-right-40">birthday | date :"MM/dd/yy":</span>
+      <span class="color-red">{{birthday | date:"MM/dd/yy" }}</span>
+    </div>
+    <div>
+      <span class="margin-right-40">birthday | date :"shortDate":</span>
+      <span class="color-red">{{birthday | date:"shortDate" }}</span>
+    </div>
+    <div> 
+      <span class="margin-right-40">birthday | date :"fullDate":</span>
+      <span class="color-red">{{birthday | date:"fullDate" }} </span>
+    </div>
+    <div> 
+      <span class="margin-right-40">birthday | date :"fullDate" | uppercase : </span>
+      <span class="color-red">{{birthday | date:"fullDate" | uppercase}}</span>
+    </div>
+  </div>
+  <div class="bg-f margin-bottom-20 padding-10">
+    <div class="f-14 color-theme fw">2. 自定义管道(pipe)</div>
+    <div>
+      <span class="margin-right-40">12 | doubleNum ： </span>
+      <span class="color-red">{{12 | doubleNum }}</span>
+    </div>
+  </div>
+  <div class="bg-f margin-bottom-20 padding-10">
+    <div class="f-14 color-theme fw">3. 数据绑定</div>
+    <div class="margin-left-20 f-12">
+      <div class="color-theme">1). 数据 => 视图 （单向）: [target] / bind-target</div>
+      <div class="margin-left-20 ">
+        <div>
+          <span class="margin-right-20">expression:</span>
+          <span class="color-red">{{dataToView}}</span>
+        </div>
+        <div>
+          <span class="margin-right-20">[target]="expression" / bind-target="expression" :</span>
+          <span [style]="{color:'red'}">{{dataToView}}([target])</span>
+          <span bind-class="['color-theme','margin-left-20']">{{dataToView}}(bind-target)</span>
+        </div>
+      </div>
+    </div>
+    <div class="margin-left-20 f-12">
+      <div class="color-theme">2). 视图 => 数据（单向）: (events) / on-events</div>
+      <div class="margin-left-20 ">
+        <div>
+          <button class="color-red" (click)="eventClick('(events)')">(events)</button>
+          <button class="color-red margin-left-10" (click)="eventClick('on-events')">on-events</button>
+        </div>
+      </div>
+    </div>
+    <div class="margin-left-20 f-12">
+      <div class="color-theme">2). 视图 <=> 数据（双向）: [(target)] / bindon-target</div>
+      <div class="margin-left-20 ">
+        <div>
+          <input class="border" [(ngModel)]="inputVal">
+          <span class="margin-left-10 color-red">{{inputVal}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

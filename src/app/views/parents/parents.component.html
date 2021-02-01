@@ -1,0 +1,24 @@
+<div class="border f-16 padding-20 bg-red">
+  <p class="fw f-20 margin-bottom-20">父子组件通信</p>
+  <div class="bg-f margin-bottom-20 padding-10">
+    <div class="f-14 color-theme fw">1. @Input & @Output</div>
+    <app-child [parentTitle]="title" (notify)="fromChildEmit($event)"></app-child>
+  </div>
+  <div class="bg-f margin-bottom-20 padding-10">
+    <div class="f-14 color-theme fw">2. #componentName 引用子组件实例(类似vue的ref)</div>
+    <div>from child title: {{child.title}}</div>
+    <app-child #child [parentTitle]="title" (notify)="fromChildEmit($event)"></app-child>
+  </div>
+  <div class="bg-f margin-bottom-20 padding-10">
+    <div class="f-14 color-theme fw">3. @ViewChild</div>
+    <button (click)="callChild()">call child's title</button>
+  </div>
+  <div class="test">test</div>
+  <router-outlet></router-outlet>
+</div>
+<style>
+  .test{
+    color: aqua;
+  }
+</style>
+
