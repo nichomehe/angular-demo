@@ -10,7 +10,7 @@ export class TemplatesComponent{
 
   dataToView:string = 'info:   dataToView'
 
-  inputVal:string = ""
+  inputVal:string | Event = ""
 
   eventClick(msg:string = ""){
     alert(this.inputVal)
