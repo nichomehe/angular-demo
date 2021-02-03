@@ -65,4 +65,33 @@
       </div>
     </div>
   </div>
+  <div class="bg-f margin-bottom-20 padding-10 f-12">
+    <div class="f-14 color-theme fw">4. 指令</div>
+    <div class="margin-top-10">
+      <span class="margin-right-10">属性型指令： </span>
+      <span [ngClass]="['color-red']">ngClass</span>
+      <span [ngStyle]="{'color':'red','margin-left':'10px'}">ngStyle</span>
+      <!-- <span [ngClass]="['color-red','margin-left-10']">ngClass</span> -->
+      <span class="color-red margin-left-10">ngModel</span>
+      <input [(ngModel)]="propDirect" class="border margin-left-5" [style.width]="'20px'">
+    </div>
+    <div class="margin-top-10">
+      <span class="margin-right-10">结构型指令： </span>
+      <div [ngClass]="['color-red','margin-left-20']">*ngIf / *ngElse :
+        <span *ngIf="showSpan" class="margin-left-10">Nicole</span>
+        <button (click)="showSpan = !showSpan">{{showSpan ? 'hide' : 'show'}}</button>
+      </div>
+      <div [ngClass]="['color-red','margin-left-20']">*ngFor
+        <span *ngFor="let num of demoArr" class="margin-right-5">{{num}}</span>
+      </div>
+      <div [ngClass]="['color-red','margin-left-20']" [ngSwitch]="witchSpan">ngSwitch / *ngSwitchCase :
+        <span *ngSwitchCase="1">1</span>
+        <span *ngSwitchCase="2">2</span>
+        <span *ngSwitchCase="3">3</span>
+      </div>
+    </div>
+    <div class="margin-top-10">
+      <span class="margin-right-10">自定义指令： </span>
+    </div>
+  </div>
 </div>

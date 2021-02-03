@@ -12,7 +12,16 @@ export class TemplatesComponent{
 
   inputVal:string | Event = ""
 
+  demoArr:Array<number> = [1,2,3]
+
+  propDirect:string = ""
+
+  showSpan:boolean = true
+
+  witchSpan:string = "1"
+
+
   eventClick(msg:string = ""){
-    alert(this.inputVal)
+    alert(msg)
   }
 }
