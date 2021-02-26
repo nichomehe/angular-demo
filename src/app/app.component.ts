@@ -5,7 +5,7 @@ import { Component ,Input , ViewChild , AfterViewInit} from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements AfterViewInit{
-  title:string = 'angular-demo===';
+  title:string = 'angular-demo';
   msg:string = ""
   ngOnChanges(changes:any){
     console.log(changes)

@@ -1,0 +1,21 @@
+<p>forms works!!~~~~</p>
+
+<form [formGroup]="userInfoForm" >
+  <label class="margin-top-15">姓名:
+    <input type="text" formControlName="name"hy>
+  </label>
+
+  <label class="margin-top-15">年龄:
+    <input type="text" formControlName="age">
+  </label>
+  <button type="submit" (click)="update()">Submit</button>
+</form>
+
+<form [formGroup]="otherInfoForm" class="margin-top-20">
+  <label class="margin-top-15">地址:
+    <input type="text" formControlName="address" required>
+  </label>
+  <button type="submit" (click)="updateOther()">Submit</button>
+</form>
+<!-- <button (click)="update()">update</button> -->
+<!-- <p class="corlor-red f-14">{{username.value}}</p> -->
